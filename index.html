@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Cores e Filtro de Imagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Conversão e Visualização de Cores</h1>
+    <div class="color-selector">
+        <h2>Selecione a Cor</h2>
+        <div>
+            <label for="rgbR">R:</label>
+            <input type="range" id="rgbR" min="0" max="255" value="255">
+            <span id="rgbRValue">255</span>
+        </div>
+        <div>
+            <label for="rgbG">G:</label>
+            <input type="range" id="rgbG" min="0" max="255" value="255">
+            <span id="rgbGValue">255</span>
+        </div>
+        <div>
+            <label for="rgbB">B:</label>
+            <input type="range" id="rgbB" min="0" max="255" value="255">
+            <span id="rgbBValue">255</span>
+        </div>
+        <div>
+            <h3>Cor em RGB</h3>
+            <div id="colorDisplay" style="width: 100px; height: 100px; border: 1px solid #000;"></div>
+        </div>
+    </div>
+    
+    <div class="color-conversion">
+        <h2>Conversão de Cores</h2>
+        <div>
+            <h3>HSV</h3>
+            <label for="hue">H:</label>
+            <input type="range" id="hue" min="0" max="360" value="360">
+            <span id="hueValue">360</span>
+            <label for="saturation">S:</label>
+            <input type="range" id="saturation" min="0" max="100" value="100">
+            <span id="saturationValue">100</span>
+            <label for="value">V:</label>
+            <input type="range" id="value" min="0" max="100" value="100">
+            <span id="valueValue">100</span>
+        </div>
+        <div>
+            <h3>CMY(K)</h3>
+            <label for="cmyC">C:</label>
+            <input type="range" id="cmyC" min="0" max="100" value="0">
+            <span id="cmyCValue">0</span>
+            <label for="cmyM">M:</label>
+            <input type="range" id="cmyM" min="0" max="100" value="0">
+            <span id="cmyMValue">0</span>
+            <label for="cmyY">Y:</label>
+            <input type="range" id="cmyY" min="0" max="100" value="0">
+            <span id="cmyYValue">0</span>
+            <label for="cmyK">K:</label>
+            <input type="range" id="cmyK" min="0" max="100" value="0">
+            <span id="cmyKValue">0</span>
+        </div>
+    </div>
+
+    <div class="image-filter">
+        <h2>Filtro de Imagem</h2>
+        <input type="file" id="imageInput">
+        <canvas id="imageCanvas" width="600" height="400"></canvas>
+        <div>
+            <label for="saturationFilter">Saturação:</label>
+            <input type="range" id="saturationFilter" min="0" max="2" step="0.1" value="1">
+            <span id="saturationFilterValue">1</span>
+            <label for="valueFilter">Valor:</label>
+            <input type="range" id="valueFilter" min="0" max="2" step="0.1" value="1">
+            <span id="valueFilterValue">1</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.color-selector, .color-conversion, .image-filter {
+    margin: 20px;
+}
+
+.color-selector div, .color-conversion div, .image-filter div {
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#imageCanvas {
+    border: 1px solid #000;
+}
